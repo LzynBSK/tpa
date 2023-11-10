@@ -110,24 +110,25 @@ const styles = StyleSheet.create({
   input: {
     height: 40,
     width: "80%",
-    marginBottom: 5,
+    marginBottom: 10,
     backgroundColor: "#e8e8e8",
     padding: 5,
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
+    fontSize: 16,
   },
 
   input2: {
     height: 40,
     width: "80%",
-    marginBottom: 5,
+    marginBottom: 10,
     backgroundColor: "#e8e8e8",
     padding: 5,
-
+    fontSize: 16,
   },
 
   tittleStyle: {
-    fontSize: 30,
+    fontSize: 35,
     fontWeight: 'bold', // Adiciona negrito ao texto
     textAlign: 'center', // Centraliza o texto
     marginBottom: 50, // Ajusta a margem superior para movê-lo para cima
@@ -142,6 +143,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
+  
   },
 
 txtSignIn:{
@@ -152,7 +154,8 @@ txtSignIn:{
 },
 
   txtcadastro: {
-    color: "#FFF"
+    color: "#FFF",
+    fontSize: 16,
   },
     container__safe:{
         flex: 1

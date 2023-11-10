@@ -60,17 +60,18 @@ const styles = StyleSheet.create({
     input: {
       height: 40,
       width: "80%",
-      marginBottom: 5,
+      marginBottom: 10,
       backgroundColor: "#e8e8e8",
       padding: 5,
       borderTopLeftRadius: 10,
       borderTopRightRadius: 10,
+ 
     },
   
     input2: {
       height: 40,
       width: "80%",
-      marginBottom: 5,
+      marginBottom: 10,
       backgroundColor: "#e8e8e8",
       padding: 5,
   
