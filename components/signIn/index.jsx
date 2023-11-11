@@ -11,13 +11,22 @@ import {
 import Parse from "parse/react-native";
 import 'react-native-get-random-values';
 
+
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const doLogin = async () => {
     try {
-      await Parse.User.logIn(email, password);     
+      await Parse.User.logIn(email, password); 
+
+      const CurrentUser = Parse.User.current();
+      const username = CurrentUser.get("Username");
+      Alert.alert(
+        "Sucesso ✅",
+        `Seja bem-vindo(a) "${username}", usuário criado com sucesso.`
+      );    
+      navigation.navigate('comedouros', {screen: 'home'});
       console.log('User logged in successfully');
     } catch (error) {
       console.error("Error: " + error.code + " " + error.message);
