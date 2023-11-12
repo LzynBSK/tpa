@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import Parse from "parse/react-native";
 import 'react-native-get-random-values';
+import { router } from "expo-router";
 
 
 const LoginScreen = () => {
@@ -19,14 +20,13 @@ const LoginScreen = () => {
   const doLogin = async () => {
     try {
       await Parse.User.logIn(email, password); 
-
       const CurrentUser = Parse.User.current();
       const username = CurrentUser.get("Username");
       Alert.alert(
         "Sucesso ✅",
-        `Seja bem-vindo(a) "${username}", usuário criado com sucesso.`
+        `Seja bem-vindo(a) "${username}", logado com sucesso.`
       );    
-      navigation.navigate('comedouros', {screen: 'home'});
+      router.replace('/feeders/comedouros')
       console.log('User logged in successfully');
     } catch (error) {
       console.error("Error: " + error.code + " " + error.message);

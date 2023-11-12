@@ -3,6 +3,7 @@
     "name": "techpetcontroll",
     "slug": "techpetcontroll",
     "version": "1.0.0",
+    "scheme":"techpetcontroll",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -24,7 +25,16 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/favicon.png",
+      "bundler":"metro"
+    },
+
+    "experiments":{
+      "typedRoutes":"true"
+    },
+
+    "plugins": [
+      "expo-router"
+    ]
   }
 }

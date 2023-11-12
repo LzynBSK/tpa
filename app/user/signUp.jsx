@@ -12,7 +12,8 @@ import {
 
 import Parse from "parse/react-native";
 import 'react-native-get-random-values';
-import { Ionicons } from '@expo/vector-icons'; // Certifique-se de ter instalado o pacote @expo/vector-icons.
+import { Ionicons } from '@expo/vector-icons';
+import { router } from "expo-router";// Certifique-se de ter instalado o pacote @expo/vector-icons.
 
 export const SignUpScreen = ({navigation}) => {
     const [email, setEmail] = useState('');
@@ -59,7 +60,7 @@ export const SignUpScreen = ({navigation}) => {
         "Sucesso ✅",
         `Seja bem-vindo(a) ${username}, usuário cadastrado com sucesso.`
       );
-      navigation.navigate('comedouros', {screen: 'home'});
+    router.replace('/user/signIn');
     } catch (error) {
       console.error('Erro ao cadastrar:', error);
 
@@ -194,3 +195,5 @@ txtSignIn:{
         justifyContent: 'center',
       }, 
 });
+
+export default SignUpScreen;
