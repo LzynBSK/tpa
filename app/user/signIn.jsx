@@ -56,11 +56,12 @@ const LoginScreen = () => {
     Entrar
 </Text>
   </Pressable>
-  <Pressable style={styles.btnSignIn} onPress={() => navigation.navigate("Login")}>
-<Text style={styles.txtSignIn}>
-    Ou, faça cadastro
-</Text>
-  </Pressable>
+  <View className="flex-row justify-center mt-2">
+    <Text> Já tem uma conta? </Text>
+    <TouchableOpacity onPress={() => (router.push("/user/signIn"))}>
+      <Text className="text-sky-600">Entrar</Text>  
+    </TouchableOpacity>
+   </View>
   </View>
 </SafeAreaView>
   );

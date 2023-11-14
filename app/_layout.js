@@ -4,7 +4,7 @@ import { Ionicons, Feather } from '@expo/vector-icons';
 
 export default function Layout() {
   return (
-    <Drawer screenOptions={{title: '', drawerActiveTintColor:"#266f5f", drawerStyle:{backgroundColor:"#95D6Be"},  headerStyle:{ backgroundColor: "#266F5F" }, headerTitleStyle:{ color: "#FFF", fontWeight:"100"}, headerTitleAlign: "center",}}>
+    <Drawer screenOptions={{title: '',headerShown: false, drawerActiveTintColor:"#266f5f", drawerStyle:{backgroundColor:"#95D6Be"},  headerStyle:{ backgroundColor: "#266F5F" }, headerTitleStyle:{ color: "#FFF", fontWeight:"100"}, headerTitleAlign: "center",}}>
     <Drawer.Screen
         name="user" // This is the name of the page and must match the url from root
         options={{

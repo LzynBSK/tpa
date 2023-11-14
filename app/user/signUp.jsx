@@ -88,7 +88,7 @@ export const SignUpScreen = ({navigation}) => {
       autoCapitalize={"none"}
     />
     <TextInput
-      style={styles.input2}    
+      style={styles.input}    
       value={email}
       placeholder={"Email"}
       onChangeText={(text) => setEmail(text)}
@@ -110,9 +110,13 @@ export const SignUpScreen = ({navigation}) => {
     <Pressable style={styles.btnCadastrar} onPress={() => doCadastrar()}>
       <Text style={styles.txtcadastro}>Cadastrar</Text>
     </Pressable>
-    <Pressable style={styles.btnSignIn} onPress={() => navigation.navigate("home", {screen: 'login'})}>
-      <Text style={styles.txtSignIn}>Já tem uma conta?</Text>
-    </Pressable>
+   <View className="flex-row justify-center mt-2">
+    <Text> Já tem uma conta? </Text>
+    <TouchableOpacity onPress={() => (router.push("/user/signIn"))}>
+      <Text className="text-sky-600">Entrar</Text>  
+    </TouchableOpacity>
+   </View>
+    
 
     </View>
   </SafeAreaView>
@@ -121,10 +125,9 @@ export const SignUpScreen = ({navigation}) => {
 
 const styles = StyleSheet.create({
   input: {
-    height: 40,
+    height: 50,
     width: "80%",
-    borderTopLeftRadius: 10,
-    borderTopRightRadius: 10,
+    borderRadius:20,
     marginBottom: 10,
     backgroundColor: "#e8e8e8",
     padding: 5,
@@ -133,21 +136,22 @@ const styles = StyleSheet.create({
   input2: {
     height: 40,
     width: "80%",
+    borderRadius:20,
     marginBottom: 10,
     backgroundColor: "#e8e8e8",
     padding: 5,
     fontSize: 16,
   },
+
   passwordInput: {
     flexDirection: 'row',
     alignItems: 'center',
-    height: 40,
+    height: 50,
     width: "80%",
     marginBottom: 10,
     backgroundColor: "#e8e8e8",
     padding: 5,
-    borderBottomLeftRadius: 10,
-    borderBottomRightRadius: 10,
+    borderRadius:20,
     fontSize: 16,
   },
   eyeIcon: {
@@ -165,12 +169,11 @@ const styles = StyleSheet.create({
 
   btnCadastrar:{
     backgroundColor: "#266F5F",
-    height: 40,
+    height: 50,
     width: "80%",
     alignItems: "center",
     justifyContent: "center",
-    borderBottomLeftRadius: 10,
-    borderBottomRightRadius: 10,
+    borderRadius: 20
   
   },
 
